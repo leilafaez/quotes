@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container{
+  background-color: lightgray;
+  width: 700px;
+  height: 200px;
+  border-radius: 5px;
+  position: absolute;
+  left:20%;
+  top:20%;
+}
+.quote{
+
+  font-size: x-large;
+  font-weight: bold;
+  font-style: italic;
+}
+.author{
+  font-size: small;
+  font-style: italic;
+}
+.btn{
+  border-radius: 4px;
+  
+}

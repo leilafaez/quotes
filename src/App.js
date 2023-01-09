@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import {  useState } from 'react';
 
 function App() {
+
+  const[quotes,setQuotes]=useState([]);
+
+  const handleQuotes =()=>{
+   fetch("https://leila-quotes-server-app.glitch.me/quotes/random")
+     .then((response) => response.json())
+     .then((data) => setQuotes(data));
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container">
+      <p className='quote'>{quotes.quote}</p>
+     {quotes.author ? <p className='author'>{`--${quotes.author}--`}</p> : <p></p> } 
+      <button onClick={handleQuotes} className='btn'>Show Quotes</button>
     </div>
   );
 }
