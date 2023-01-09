@@ -6,7 +6,7 @@ function App() {
   const[quotes,setQuotes]=useState([]);
 
   const handleQuotes =()=>{
-   fetch("https://leila-quotes-server-app.glitch.me/quotes/random")
+   fetch("https://leilafaez-quotes-server-app.glitch.me/quotes/random")
      .then((response) => response.json())
      .then((data) => setQuotes(data));
   }
