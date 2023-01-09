@@ -22,7 +22,7 @@ code {
 }
 .quote{
 
-  font-size: x-large;
+  font-size: large;
   font-weight: bold;
   font-style: italic;
 }
@@ -32,5 +32,5 @@ code {
 }
 .btn{
   border-radius: 4px;
-  
+
 }
